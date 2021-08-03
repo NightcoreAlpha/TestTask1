@@ -2,12 +2,22 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="users.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="users.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
